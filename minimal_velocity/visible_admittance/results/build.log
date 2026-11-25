@@ -1,0 +1,34 @@
+[Warning: Name is nonexistent or not a directory: C:\GradProject\Simulation\Robot\Robot_ver2_Control_Testbench\Robot_ver2_Control_Testbench\minimal_velocity\src] 
+[> In path (line 109)
+In addpath>doPathAddition (line 126)
+In addpath (line 90)
+In load_system>i_load_system (line 44)
+In load_system (line 20)
+In build_visible_admittance (line 10)] 
+[Warning: Name is nonexistent or not a directory: C:\GradProject\Simulation\Robot\Robot_ver2_Control_Testbench\Robot_ver2_Control_Testbench\minimal_velocity\control] 
+[> In path (line 109)
+In addpath>doPathAddition (line 126)
+In addpath (line 90)
+In load_system>i_load_system (line 44)
+In load_system (line 20)
+In build_visible_admittance (line 10)] 
+[Warning: Name is nonexistent or not a directory:
+C:\GradProject\Simulation\Robot\Robot_ver2_Control_Testbench\Robot_ver2_Control_Testbench\minimal_velocity\mechanics\URDF_Assembly_Robot_ver2\meshes] 
+[> In path (line 109)
+In addpath>doPathAddition (line 126)
+In addpath (line 90)
+In load_system>i_load_system (line 44)
+In load_system (line 20)
+In build_visible_admittance (line 10)] 
+{Error using build_visible_admittance>wire (line 204)
+The destination port already has a line connection
+
+Error in build_visible_admittance (line 65)
+wire(model,'Cartesian Admittance/2','Measurements/6','published TCP twist');
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ - Show complete stack trace
+} 
+[Warning: Unable to close the model 'robot_ver2_velocity_visible' because it has been changed. To save changes, use close_system('robot_ver2_velocity_visible',1). To
+discard changes, use close_system('robot_ver2_velocity_visible',0).] 
+[Warning: Save contents of model workspace before closing?
+
+ The model workspace's data source is file "".] 

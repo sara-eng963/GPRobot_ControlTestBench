@@ -1,0 +1,23 @@
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  binutils-mingw-w64-x86-64 gcc-mingw-w64-base
+  gcc-mingw-w64-x86-64-posix-runtime mingw-w64-common mingw-w64-x86-64-dev
+Suggested packages:
+  gcc-13-locales wine64
+The following NEW packages will be installed:
+  binutils-mingw-w64-x86-64 gcc-mingw-w64-base gcc-mingw-w64-x86-64-posix
+  gcc-mingw-w64-x86-64-posix-runtime mingw-w64-common mingw-w64-x86-64-dev
+0 upgraded, 6 newly installed, 0 to remove and 600 not upgraded.
+Need to get 65.0 MB of archives.
+After this operation, 401 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu noble/universe amd64 binutils-mingw-w64-x86-64 amd64 2.41.90.20240122-1ubuntu1+11.4 [6,053 kB]
+Get:2 http://archive.ubuntu.com/ubuntu noble/universe amd64 mingw-w64-common all 11.0.1-3build1 [5,580 kB]
+Get:3 http://archive.ubuntu.com/ubuntu noble/universe amd64 mingw-w64-x86-64-dev all 11.0.1-3build1 [3,786 kB]
+Get:4 http://archive.ubuntu.com/ubuntu noble/universe amd64 gcc-mingw-w64-base amd64 13.2.0-6ubuntu1+26.1 [188 kB]
+Get:5 http://archive.ubuntu.com/ubuntu noble/universe amd64 gcc-mingw-w64-x86-64-posix-runtime amd64 13.2.0-6ubuntu1+26.1 [14.0 MB]
+Get:6 http://archive.ubuntu.com/ubuntu noble/universe amd64 gcc-mingw-w64-x86-64-posix amd64 13.2.0-6ubuntu1+26.1 [35.4 MB]
+Fetched 65.0 MB in 25s (2,607 kB/s)
+Download complete and in download only mode
+W: Download is performed unsandboxed as root as file '/tmp/rb2-mingw-LYtX92/pkg/partial/binutils-mingw-w64-x86-64_2.41.90.20240122-1ubuntu1+11.4_amd64.deb' couldn't be accessed by user '_apt'. - pkgAcquire::Run (13: Permission denied)

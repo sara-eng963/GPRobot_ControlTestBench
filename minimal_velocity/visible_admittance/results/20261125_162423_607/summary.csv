@@ -1,0 +1,4 @@
+name,controller,plant,evidence
+isolated_zero,PASS,N/A,C max 0; published max 0; peak speeds [0 0 0 0 0 0]; peak delta/dt [0 0 0 0 0 0]
+isolated_positive_limits,PASS,N/A,C max 5.2e-17; published max 0; peak speeds [0.05 0.05 0.05 0.15 0.15 0.15]; peak delta/dt [0.2 0.2 0.2 0.5 0.5 0.5]
+isolated_negative_limits,PASS,N/A,C max 5.2e-17; published max 0; peak speeds [0.05 0.05 0.05 0.15 0.15 0.15]; peak delta/dt [0.2 0.2 0.2 0.5 0.5 0.5]

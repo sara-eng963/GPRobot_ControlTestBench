@@ -1,0 +1,14 @@
+Running isolated_zero
+PASS controller | N/A plant | C max 0; published max 0; peak speeds [0 0 0 0 0 0]; peak delta/dt [0 0 0 0 0 0]
+Running isolated_positive_limits
+PASS controller | N/A plant | C max 5.2e-17; published max 0; peak speeds [0.05 0.05 0.05 0.15 0.15 0.15]; peak delta/dt [0.2 0.2 0.2 0.5 0.5 0.5]
+Running isolated_negative_limits
+PASS controller | N/A plant | C max 5.2e-17; published max 0; peak speeds [0.05 0.05 0.05 0.15 0.15 0.15]; peak delta/dt [0.2 0.2 0.2 0.5 0.5 0.5]
+RESULTS C:\GradProject\Simulation\Robot\Robot_ver2_Control_Testbench\Robot_ver2_Control_Testbench\minimal_velocity\visible_admittance\results\20261125_162423_607
+
+ans =
+
+    'C:\GradProject\Simulation\Robot\Robot_ver2_Control_Testbench\Robot_ver2_Control_Testbench\minimal_velocity\visible_admittance\results\20261125_162423_607'
+
+[Warning: Unable to close the model 'robot_ver2_velocity_visible' because it has been changed. To save changes, use close_system('robot_ver2_velocity_visible',1). To
+discard changes, use close_system('robot_ver2_velocity_visible',0).] 

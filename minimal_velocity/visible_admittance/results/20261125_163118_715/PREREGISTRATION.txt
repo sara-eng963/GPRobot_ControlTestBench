@@ -1,0 +1,50 @@
+VISIBLE ADMITTANCE | ACCEPTANCE CRITERIA FROZEN BEFORE SIMULATION
+
+All cases use the saved compact park, original 2 ms controller clock,
+0.5 ms ode4 plant step and existing guards/limits. The original native C
+admittance plus mapper is the numerical oracle. The mapper-only gateway
+uses the same mapper, C Jacobian and parameters.
+
+Controller:
+- Each live run replays its actual EMA wrench and measured q into the
+  original native C path. Compare limited twist at this tick, published
+  twist at the next tick and qd at the next tick. Absolute max <=1e-12 in
+  the respective SI units. Standalone switches admittance state off.
+- Isolated tests use the exact model subsystem, disconnected from the
+  plant, with zero and high signed bounded wrench. Zero output <=1e-12.
+  For each sign each axis must hit its original acceleration and speed
+  caps in the high-input fixture. The two clamps are checked in order and
+  C equivalence must continue through release. Speed and per-tick delta
+  may exceed configured caps by at most 1e-12 in component units.
+- A signed force/moment case requires the mean signed mapped Cartesian
+  velocity in the driven component to be positive during 0.23-0.39 s.
+  This is computed from the original base-at-TCP Jacobian and the command.
+- Physical wrench is compared independently to the requested time law
+  within 1e-12 N or N m. Default pulse duplicates the old sine-squared
+  profile. Hold profile applies the selected vector for [start,release).
+
+Measured plant, assessed separately:
+- Complete finite traces, preserve original initialization/guards and
+  torque caps. Peak raw joint excursion <=0.08 rad and peak speed <=0.5
+  rad/s, the same compact simulation experiment bounds.
+- For signed trials, mean signed measured TCP velocity must be positive
+  in the driven component over 0.23-0.39 s. Record both mean values and
+  final drift after release. Zero physical input retains sensor noise.
+- Compare matching Fx and Mx trials to the archived minimal-velocity
+  raw runs when compatible. Expected max drift between old/new q,
+  qd, applied torque and TCP translation <=1e-8 in respective units
+  at common timestamps. Do not infer equality if the archive is absent.
+- Loaded and released motion is reported, with no requirement to freeze
+  or return to park. No gains or thresholds adjusted after seeing results.
+
+Fixtures:
+Zero run of 0.40 s. Signed single-component pulse from 0.10 to 0.52 s,
+observed to 0.92 s: 0.18 N each force axis; 0.015 N m each moment axis
+with both signs in separate runs. Hold case: +0.12 N X, -0.06 N Y and
++0.010 N m Y from 0.10 to 0.44 s; observe to 0.92 s. Offline saturation:
++-[4 4 4 .8 .8 .8] from 0.10 to 0.54 s; observe to 0.94 s. The offline
+fixture drives the admittance only and never applies those loads to RobotPlant.
+The standalone regression bypasses admittance, commands a 0.02 rad/s
+J1 pulse from 0.08 to 0.30 s and observes through 0.40 s. Selection must
+match the standalone input within 1e-12 rad/s, with zero mapper output
+and the same plant bounds.
