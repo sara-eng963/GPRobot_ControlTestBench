@@ -37,3 +37,6 @@ fprintf('Plant step: %.4f s\n', plantTs);
 
 disp('Initial joint angles [deg]:');
 disp(initialQ_deg);
+
+%% Electrical servo initialization
+init_servos;
