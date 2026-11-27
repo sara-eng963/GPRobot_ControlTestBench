@@ -1,5 +1,6 @@
 %% ADMITTANCE CONTROLLER - INITIALIZATION
-
+addpath(fullfile(fileparts(mfilename('fullpath')), ...
+    'Models'));
 % Location of the existing admittance repository.
 admittanceDir = 'D:\University\Graduation Project\MATLAB Work Control Subteam\Admittance Control';
 

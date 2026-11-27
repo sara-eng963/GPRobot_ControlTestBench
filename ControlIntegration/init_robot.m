@@ -28,6 +28,12 @@ urdfPath = fullfile(mechanicsDir, 'urdf', ...
 
 % Make the Simulink models and STL meshes accessible.
 addpath(integrationDir);
+addpath(fullfile(integrationDir,'Models'));
+addpath(fullfile(integrationDir,'Trajectory'));
+addpath(fullfile(integrationDir,'Testbenches'));
+addpath(fullfile(integrationDir,'tests'));
+addpath(fullfile(integrationDir,'ServoModels'));
+addpath(fullfile(integrationDir,'Kinematics'));
 addpath(meshDir);
 
 
@@ -63,7 +69,7 @@ assert(isfolder(meshDir), 'STL mesh directory not found.');
 
 assert(isfile(urdfPath), 'Robot URDF not found.');
 
-assert(isfile(fullfile(integrationDir, 'RobotPlant.slx')), ...
+assert(isfile(fullfile(integrationDir, 'Models', 'RobotPlant.slx')), ...
     'RobotPlant.slx not found.');
 
 
